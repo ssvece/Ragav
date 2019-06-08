@@ -1,7 +1,7 @@
-import tkinter
-top=tkinter.Tk()
+from tkinter import *
+top=Tk()
 top.title("LnT")
 top.geometry("600x600")
-L1=tkinter.tk.Label(top,text="Hi")
-L1.pack()
+Label1 = Label(top, text= "CASTING BOM")
+Label1.pack()
 top.mainloop()
