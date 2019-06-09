@@ -8,11 +8,13 @@ def onclick_mechbom():
 
 
 def onclick_elecbom():
-    print ("Electrical BOM")
+    print("Electrical BOM")
+
 
 root = Tk()
 root.title("LTRPM")
 root.geometry("600x600")
+mainPage = Frame(root)
 companyName = Label(root, text="LARSEN & TOUBRO RUBBER PROCESSING MACHINERY", font=("TIMES NEW ROMAN", 15), fg="blue")
 mechanicalBomButton = Button(root, text="MECHANICAL BOM", command=onclick_mechbom)
 mechanicalBomButton.place(x=100, y=300)
