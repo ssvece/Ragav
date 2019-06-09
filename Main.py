@@ -1,19 +1,22 @@
 from PIL import ImageTk
 import PIL.Image
 from tkinter import *
-def onClickMechanicalBOM():
+
+
+def onclick_mechbom():
     print("Mech BOM")
 
-def onClickElectricalBOM():
+
+def onclick_elecbom():
     print ("Electrical BOM")
 
 root = Tk()
 root.title("LTRPM")
 root.geometry("600x600")
 companyName = Label(root, text="LARSEN & TOUBRO RUBBER PROCESSING MACHINERY", font=("TIMES NEW ROMAN", 15), fg="blue")
-mechanicalBomButton = Button(root, text="MECHANICAL BOM", command=onClickMechanicalBOM)
+mechanicalBomButton = Button(root, text="MECHANICAL BOM", command=onclick_mechbom)
 mechanicalBomButton.place(x=100, y=300)
-electricalBomButton = Button(root, text="ELECTRICAL BOM", command=onClickElectricalBOM)
+electricalBomButton = Button(root, text="ELECTRICAL BOM", command=onclick_elecbom)
 electricalBomButton.place(x=375, y=300)
 companyImage = ImageTk.PhotoImage(PIL.Image.open("LNTRT.jpg"))
 companyLabel = Label(root, image=companyImage)
