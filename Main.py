@@ -1,27 +1,24 @@
-from PIL import ImageTk
-import PIL.Image
-from tkinter import *
+# Program for inventory management
+
+def menu(s):
+    switcher = {
+        1: add_item(),
+        2: "Update Item",
+        3: "Delete Item"
+    }
+    return switcher.get(s, "Invalid day of week")
 
 
-def onclick_mechbom():
-    print("Mech BOM")
+def add_item():
+    item_list=[]
+    item_name = input("Enter the name of the Item : ")
+    item_qty = input("Enter Quantity of the item : ")
+    item_type = input("Enter the Type like routers, switch .etc : ")
+    item_list.append[item_name, item_type, item_qty]
 
 
-def onclick_elecbom():
-    print("Electrical BOM")
+options = int(input("Enter 1 for Add item\n\t  2 for Update Item\n\t  3 for Delete Item  \n\t  : "))
+menu(options)
+#print(item_list)
+#1add_item()
 
-
-root = Tk()
-root.title("LTRPM")
-root.geometry("600x600")
-mainPage = Frame(root)
-companyName = Label(root, text="LARSEN & TOUBRO RUBBER PROCESSING MACHINERY", font=("TIMES NEW ROMAN", 15), fg="blue")
-mechanicalBomButton = Button(root, text="MECHANICAL BOM", command=onclick_mechbom)
-mechanicalBomButton.place(x=100, y=300)
-electricalBomButton = Button(root, text="ELECTRICAL BOM", command=onclick_elecbom)
-electricalBomButton.place(x=375, y=300)
-companyImage = ImageTk.PhotoImage(PIL.Image.open("LNTRT.jpg"))
-companyLabel = Label(root, image=companyImage)
-companyLabel.place(x=130,y=100)
-companyName.pack()
-root.mainloop()
